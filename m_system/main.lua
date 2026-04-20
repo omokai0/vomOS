@@ -8,7 +8,7 @@ function love.load()
     local data = love.filesystem.read("settings.json")
     local settings = json.decode(data)
    
-    font = love.graphics.newFont("fonts/PetitePx.ttf", 50)
+    font = love.graphics.newFont("fonts/PetitePx.ttf", 20)
     love.graphics.setFont(font)
 end
 
@@ -17,5 +17,5 @@ function love.update(dt)
 end
 
 function love.draw()
-    love.graphics.print("Hello world", 0, 0)
+    love.graphics.print("FPS: " .. love.timer.getFPS(), 0, 0)
 end
